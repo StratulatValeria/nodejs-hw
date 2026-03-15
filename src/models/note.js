@@ -10,6 +10,11 @@ export const noteSchema = new Schema(
       enum: TAGS,
       default: 'Todo',
     },
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
   },
   { timestamps: true, versionKey: false },
 );

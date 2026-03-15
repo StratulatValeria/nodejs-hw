@@ -24,13 +24,13 @@ export const setSessionCookies = (res, session) => {
   });
   res.cookie('refreshToken', session.refreshToken, {
     httpOnly: true,
-    secure: isProduction, // false для localhost
+    secure: isProduction,
     sameSite: isProduction ? 'none' : 'lax',
     maxAge: ONE_DAY,
   });
   res.cookie('sessionId', session._id, {
     httpOnly: true,
-    secure: isProduction, // false для localhost
+    secure: isProduction,
     sameSite: isProduction ? 'none' : 'lax',
     maxAge: ONE_DAY,
   });

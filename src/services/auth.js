@@ -36,11 +36,10 @@ export const setSessionCookies = (res, session) => {
 };
 
 export const clearSessionCookies = (res) => {
-  const isProduction = process.env.NODE_ENV === 'production';
   const cookieOptions = {
     httpOnly: true,
-    secure: isProduction,
-    sameSite: isProduction ? 'none' : 'lax',
+    secure: true,
+    sameSite: 'none',
   };
   res.clearCookie('accessToken', cookieOptions);
   res.clearCookie('refreshToken', cookieOptions);

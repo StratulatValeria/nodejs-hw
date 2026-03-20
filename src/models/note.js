@@ -1,5 +1,5 @@
-import pkg from 'mongoose';
-const { Schema, model } = pkg;
+import { Schema } from 'mongoose';
+import { model } from 'mongoose';
 import { TAGS } from '../constants/tags.js';
 export const noteSchema = new Schema(
   {

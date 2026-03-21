@@ -19,9 +19,11 @@ export const requestResetEmailSchema = {
     email: Joi.string().email().required(),
   }),
 };
+//  перепрошую, це був майстерний провтик 😅
+
 export const resetPasswordSchema = {
   [Segments.BODY]: Joi.object({
-    password: Joi.string().required(),
-    token: Joi.string().min(8).required(),
+    password: Joi.string().min(8).required(),
+    token: Joi.string().required(),
   }),
 };
